@@ -439,7 +439,7 @@ abstract class _DragGestureRecognizer extends DragGestureRecognizer {
 
   @override
   void didStopTrackingLastPointer(int pointer) {
-    assert(_state != _DragState.ready);
+    // assert(_state != _DragState.ready);
     switch (_state) {
       case _DragState.ready:
         break;

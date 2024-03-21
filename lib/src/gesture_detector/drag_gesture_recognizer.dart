@@ -10,7 +10,7 @@ mixin DragGestureRecognizerMixin on _DragGestureRecognizer {
     if (!canDrag) {
       return false;
     }
-    if (_velocityTrackers.keys.length == 1) {
+    if (_velocityTrackers.keys.length == 2) {
       return true;
     }
 
@@ -32,7 +32,7 @@ mixin DragGestureRecognizerMixin on _DragGestureRecognizer {
 
   @override
   void handleEvent(PointerEvent event) {
-    assert(_state != _DragState.ready);
+    // assert(_state != _DragState.ready);
     if (!event.synthesized &&
         (event is PointerDownEvent ||
             event is PointerMoveEvent ||
